@@ -8,6 +8,10 @@ using System.Text;
 namespace ServiceMtk_P1_NIM
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
+    /// <summary>
+    /// main interface IMatematika
+    /// </summary>
+    /// <remarks>interface IMatematika membuat exception dari int Tambah, Kurang, Kali, Bagi</remarks>
     [ServiceContract]
     public interface IMatematika
     {
@@ -29,6 +33,9 @@ namespace ServiceMtk_P1_NIM
         Koordinat TKoordinat(Koordinat a, Koordinat b); //object dari class
     }
 
+    /// <summary>
+    /// Class Mathfault
+    /// </summary>
 
     [DataContract]
     //Tambahkan kelas berikut
@@ -39,6 +46,9 @@ namespace ServiceMtk_P1_NIM
         [DataMember]
         public string Pesan { get; set; }
     }
+    /// <summary>
+    /// Class Koordinat
+    /// </summary>
     public class Koordinat
     {
         private int _x, _y; //atribut
